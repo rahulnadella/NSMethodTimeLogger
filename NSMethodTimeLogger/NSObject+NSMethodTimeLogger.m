@@ -22,7 +22,7 @@
  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  OTHER DEALINGS IN THE SOFTWARE.
  
- NSMethodTimeLoggerTests.h
+ NSObject (NSMethodTimeLogger).m
  NSMethodTimeLogger
  
  Created by Rahul Nadella on 06/04/13.
@@ -30,13 +30,26 @@
  */
 
 #import "NSObject+NSMethodTimeLogger.h"
-#import <SenTestingKit/SenTestingKit.h>
 /*
- The NSMethodTimeLoggerTests interface is a set of tests that perform opertations on the NSMethodTimeLogger category.
+ The implementation of the NSObject+NSMethodTimeLogger category
  
  @since 1.0
  @version 1.0
  */
-@interface NSMethodTimeLoggerTests : SenTestCase
+@implementation NSObject (NSMethodTimeLogger)
+
+#pragma mark - logTimeElapsedPerMethod method
+
+-( void) logTimeElapsedPerMethod:(void (^)(void)) block withMethodDescription:(NSString*) methodDescription
+{
+	double a = CFAbsoluteTimeGetCurrent();
+	block();
+	double b = CFAbsoluteTimeGetCurrent();
+    
+    /* convert from seconds to milliseconds */
+	unsigned int m = ((b-a) * 1000.0f); 
+    
+	NSLog(@"%@: %d ms", methodDescription ? methodDescription : @"Time Taken to Run Method", m);
+}
 
 @end

@@ -22,21 +22,40 @@
  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  OTHER DEALINGS IN THE SOFTWARE.
  
- NSMethodTimeLoggerTests.h
+ NSObject (NSMethodTimeLogger).h
  NSMethodTimeLogger
  
  Created by Rahul Nadella on 06/04/13.
  Copyright 2013 Rahul Nadella. All rights reserved.
  */
 
-#import "NSObject+NSMethodTimeLogger.h"
-#import <SenTestingKit/SenTestingKit.h>
+#import <Foundation/Foundation.h>
 /*
- The NSMethodTimeLoggerTests interface is a set of tests that perform opertations on the NSMethodTimeLogger category.
+ The NSObject+NSMethodTimeLogger category calculates the exact amount of time it takes for a specific method or function to be executed on the main thread.  The current time elaspsed is calculated in milliseconds.
+ 
+ EXAMPLE: 
+ [self logTimeElapsedPerMethod:^{
+        for(int i = 0 ; i < 1000000000; i ++);
+ }
+ withMethodDescription:@"For Loop with 1000000000"];
+ 
+ OUTPUT: 2013-06-04 21:38:38.426 NSMethodTimeLogger[3475:c07] For Loop with 1000000000: 1746 ms
  
  @since 1.0
  @version 1.0
  */
-@interface NSMethodTimeLoggerTests : SenTestCase
+@interface NSObject (NSMethodTimeLogger)
+
+/*
+ The logTimeElapsedPerMethod method provides the ability to calculate the time elapsed while executing a specific method or function.
+ 
+ @since 1.0
+ 
+ @param block
+        The block containing the specific set of instructions
+ @param methodDescription
+        The specific description of the method being executed
+ */
+- (void) logTimeElapsedPerMethod:(void (^)(void)) block withMethodDescription:(NSString*) methodDescription;
 
 @end
