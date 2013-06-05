@@ -40,12 +40,14 @@
 
 #pragma mark - logTimeElapsedPerMethod method
 
--( void) logTimeElapsedPerMethod:(void (^)(void)) block withMethodDescription:(NSString*) methodDescription
+- (void) logTimeElapsedPerMethod:(void (^)(void)) block withMethodDescription:(NSString*) methodDescription
 {
     /* Absolute start time measured in seconds */
 	double a = CFAbsoluteTimeGetCurrent();
-	/* Execute block of operations if set */
+	
+    /* Execute block of operations if set */
     block();
+    
     /* Absolute end time measured in seconds */
 	double b = CFAbsoluteTimeGetCurrent();
     
