@@ -31,7 +31,7 @@
 
 #import <Foundation/Foundation.h>
 /*
- The NSObject+NSMethodTimeLogger category calculates the exact amount of time it takes for a specific method or function to be executed on the main thread.  The current time elaspsed is calculated in milliseconds.
+ The NSObject+NSMethodTimeLogger category calculates the exact amount of time it takes for a specific method or function to be executed on the main thread.  The current time elaspsed is calculated and outputted to the console in milliseconds.
  
  EXAMPLE: 
  [self logTimeElapsedPerMethod:^{
