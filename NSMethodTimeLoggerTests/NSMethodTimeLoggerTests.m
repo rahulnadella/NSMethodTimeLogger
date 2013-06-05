@@ -55,11 +55,14 @@
     
     int k = (i > j) ? 10: 5;
     
-    if ( 5 < j - k) {
+    if ( 5 < j - k)
+    {
         printf("The first expression is true.");
-    } else if ( j > i) {
+    } else if ( j > i)
+    {
         printf("The second expression is true.");
-    } else {
+    } else
+    {
         printf("Neither expression is true.");
     }
     
@@ -77,7 +80,7 @@
     [self logTimeElapsedPerMethod:^{
         [self challenge];
     }
-    withMethodDescription:@"For Loop"];
+    withMethodDescription:@"Executing Challenge Method"];
 }
 
 @end
