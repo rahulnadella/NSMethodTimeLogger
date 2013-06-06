@@ -32,7 +32,8 @@
 #import "NSObject+NSMethodTimeLogger.h"
 #import <SenTestingKit/SenTestingKit.h>
 /*
- The NSMethodTimeLoggerTests interface is a set of tests that perform opertations on the NSMethodTimeLogger category.
+ The NSMethodTimeLoggerTests interface is a set of tests that perform opertations on the 
+ NSMethodTimeLogger category.
  
  @since 1.0
  @version 1.0

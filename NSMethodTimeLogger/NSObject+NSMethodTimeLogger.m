@@ -43,13 +43,13 @@
 - (void) logTimeElapsedPerMethod:(void (^)(void)) block withMethodDescription:(NSString*) methodDescription
 {
     /* Absolute start time measured in seconds */
-	double a = CFAbsoluteTimeGetCurrent();
+    double a = CFAbsoluteTimeGetCurrent();
 	
     /* Execute block of operations if set */
     block();
     
     /* Absolute end time measured in seconds */
-	double b = CFAbsoluteTimeGetCurrent();
+    double b = CFAbsoluteTimeGetCurrent();
     
     /* convert from seconds to milliseconds */
 	unsigned int m = ((b-a) * 1000.0f); 

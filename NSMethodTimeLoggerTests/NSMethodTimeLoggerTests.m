@@ -31,6 +31,12 @@
 
 #import "NSMethodTimeLoggerTests.h"
 
+/*
+ The implementation of the NSMethodTimeLoggerTests inteface.
+ 
+ @since 1.0
+ @version 1.0
+ */
 @implementation NSMethodTimeLoggerTests
 
 - (void)setUp
