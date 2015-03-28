@@ -14,7 +14,6 @@
 		FC2A698D175EC72300C790E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A698C175EC72300C790E4 /* main.m */; };
 		FC2A6991175EC72300C790E4 /* NSMethodTimeLoggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A6990175EC72300C790E4 /* NSMethodTimeLoggerAppDelegate.m */; };
 		FC2A6997175EC72300C790E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2A6996175EC72300C790E4 /* Default-568h@2x.png */; };
-		FC2A699F175EC72300C790E4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A699E175EC72300C790E4 /* SenTestingKit.framework */; };
 		FC2A69A0175EC72300C790E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A6980175EC72300C790E4 /* UIKit.framework */; };
 		FC2A69A1175EC72300C790E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A6982175EC72300C790E4 /* Foundation.framework */; };
 		FC2A69AC175EC72300C790E4 /* NSMethodTimeLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A69AB175EC72300C790E4 /* NSMethodTimeLoggerTests.m */; };
@@ -44,7 +43,6 @@
 		FC2A6990175EC72300C790E4 /* NSMethodTimeLoggerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMethodTimeLoggerAppDelegate.m; sourceTree = "<group>"; };
 		FC2A6996175EC72300C790E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FC2A699D175EC72300C790E4 /* NSMethodTimeLoggerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMethodTimeLoggerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC2A699E175EC72300C790E4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FC2A69A6175EC72300C790E4 /* NSMethodTimeLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NSMethodTimeLoggerTests-Info.plist"; path = "NSMethodTimeLoggerTests/NSMethodTimeLoggerTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FC2A69AA175EC72300C790E4 /* NSMethodTimeLoggerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSMethodTimeLoggerTests.h; path = NSMethodTimeLoggerTests/NSMethodTimeLoggerTests.h; sourceTree = SOURCE_ROOT; };
 		FC2A69AB175EC72300C790E4 /* NSMethodTimeLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSMethodTimeLoggerTests.m; path = NSMethodTimeLoggerTests/NSMethodTimeLoggerTests.m; sourceTree = SOURCE_ROOT; };
@@ -67,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2A699F175EC72300C790E4 /* SenTestingKit.framework in Frameworks */,
 				FC2A69A0175EC72300C790E4 /* UIKit.framework in Frameworks */,
 				FC2A69A1175EC72300C790E4 /* Foundation.framework in Frameworks */,
 			);
@@ -100,7 +97,6 @@
 				FC2A6980175EC72300C790E4 /* UIKit.framework */,
 				FC2A6982175EC72300C790E4 /* Foundation.framework */,
 				FC2A6984175EC72300C790E4 /* CoreGraphics.framework */,
-				FC2A699E175EC72300C790E4 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +165,7 @@
 			name = NSMethodTimeLoggerTests;
 			productName = NSMethodTimeLoggerTests;
 			productReference = FC2A699D175EC72300C790E4 /* NSMethodTimeLoggerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -178,6 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NSMethodTimeLogger;
+				LastTestingUpgradeCheck = 0620;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Rahul Nadella";
 			};
@@ -362,13 +359,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSMethodTimeLogger/NSMethodTimeLogger-Prefix.pch";
 				INFOPLIST_FILE = "NSMethodTimeLoggerTests/NSMethodTimeLoggerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -379,13 +376,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSMethodTimeLogger/NSMethodTimeLogger-Prefix.pch";
 				INFOPLIST_FILE = "NSMethodTimeLoggerTests/NSMethodTimeLoggerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -408,6 +405,7 @@
 				FC2A69B1175EC72300C790E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC2A69B2175EC72300C790E4 /* Build configuration list for PBXNativeTarget "NSMethodTimeLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +414,7 @@
 				FC2A69B4175EC72300C790E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
