@@ -49,3 +49,8 @@ Output
 ---------
         
         2015-03-27 22:07:08.966 NSMethodTimeLoggerDemo[69436:c07] For Loop: 1814 ms
+
+License
+--------
+
+*MIT License* --> A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.
