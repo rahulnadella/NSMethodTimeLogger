@@ -44,3 +44,8 @@ Usage
               }
             withMethodDescription:@"Executing Challenge Method"];
         }
+
+Output
+---------
+        
+        2015-03-27 22:07:08.966 NSMethodTimeLoggerDemo[69436:c07] For Loop: 1814 ms
