@@ -9,6 +9,9 @@ The NSMethodTimeLogger measures the time elapsed when a specific method or funct
 #####Version
 >Version 1.0 - Design and Implementation of the NSMethodTimeLogger
 
+#####Build
+>Master -> Only works on iOS 5.0 or greater
+
 Usage
 ----------
 
